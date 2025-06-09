@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    height: 100px;
+}
+
+.mainBanner{
+    background-image: url('/Images/paulo-silva-B2mY4p8GsYo-unsplash\ 1.png');
+    /*width: 100vh;*/
+    background-size: contain;
+    background-position: center;    
+    background-repeat: no-repeat;   
+    height: 459px;                  
+    display: flex;
+    align-items: flex-end;          
+    justify-content: right;        
+    color: white;
+    padding: 1.5rem;
+}
