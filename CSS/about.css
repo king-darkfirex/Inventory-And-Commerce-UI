@@ -19,7 +19,7 @@ header{
   display: flex;
   gap: 40px;
   max-width: 1000px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family:  'Helvetica Now Text', sans-serif;
   width: 100%;
   align-items: flex-start;
 }
