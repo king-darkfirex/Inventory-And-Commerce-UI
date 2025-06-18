@@ -22,3 +22,48 @@ header{
     color: white;
     padding: 1.5rem;
 }
+
+ .image{
+    transform: scale(0.7);
+}
+
+
+
+.container{
+  display: flex;
+}
+
+.displayImages{
+    display: grid;
+    grid-template-columns: 210px 210px 210px;
+    grid-template-rows: 390px 390px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size: 1.3rem;
+}
+.customise{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.3rem;
+    margin-top: 3.5rem;
+}
+ .image h4{
+    font-weight:100;
+ }
+
+.image p{
+    font-size:1.07rem;
+}
+.sort p{
+     font-size: 0.9rem;
+}
+.image span{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin-right: 12px;
+    
+}
+.sort h4,.sizeButtons h4{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
