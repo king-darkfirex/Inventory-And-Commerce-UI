@@ -24,31 +24,40 @@ header{
 }
 
  .image{
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
+@font-face {
+    font-family:'helvetica-light';
+    src: url(../HelveticaNowText-Light.woff);
+}
 
+@font-face {
+    font-family:"helvetica-bold";
+    src: url(../HelveticaNowText-Bold.woff);
+}
 
 .container{
   display: flex;
+  padding: 30px;
+  gap: 12rem;
 }
 
 .displayImages{
     display: grid;
+    column-gap:3rem;
+    row-gap:2rem;
     grid-template-columns: 210px 210px 210px;
     grid-template-rows: 390px 390px;
-    font-family:Arial, Helvetica, sans-serif;
-
+    font-family:helvetica-light;
     font-size: 1.3rem;
 }
 .customise{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:1.3rem;
-    margin-top: 3.5rem;
+    font-family:helvetica-light;
+    font-size:2rem;
+    margin-top: 1.5rem;
+    width:150px;
 }
- .image h4{
-    font-weight:100;
- }
 
 .image p{
     font-size:1.07rem;
@@ -57,13 +66,56 @@ header{
      font-size: 0.9rem;
 }
 .image span{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:helvetica-bold;
     font-weight: 800;
     margin-right: 12px;
     
 }
 .sort h4,.sizeButtons h4{
+     font-family: helvetica-bold;
     font-size: 1.1rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+.sizeButtons button{
+    width:40px;
+    height: 23px;
+    background-color: white;
+    border-width:1px;
+    border-radius:9%;
+}
+
+@media (max-width:767px) {
+    .sort h4,.sizeButtons h4{
+      font-size:0.9rem;
+    }
+    .sort p{
+        font-size:0.85rem;
+    }
+
+     .image{
+    transform: scale(0.6);
+    
+     }
+    .container{
+     display: flex;
+     padding: 15px;
+     gap:0.7rem;
+    }
+
+    .displayImages{
+    display: grid;
+    column-gap:1px;
+    grid-template-columns: 198px 198px;
+    grid-template-rows: 312px 312px 312px;
+   }
+
+    .sizeButtons button{
+    font-size: 0.7rem;
+    width:28px;
+    height: 20px;
+    background-color: white;
+    border-width:1px;
+    border-radius:9%;
+   }
 }
