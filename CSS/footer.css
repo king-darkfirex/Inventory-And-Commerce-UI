@@ -3,11 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
-    position: relative;
-    margin: 0;
+    position: relative; 
     font-family: 'Helvetica Now Text', sans-serif;
-    color: white;
 }
 
 .footer-container {
