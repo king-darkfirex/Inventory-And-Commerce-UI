@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica Now Text', Arial, sans-serif;
+    background: black;
+    color: white;
+}
+
+.main-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+}
+
+.logo {
+    height: 32px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Navbar Links Hover Effect */
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Icons Hover Effect */
+.icons img {
+  height: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.icons img:hover {
+  opacity: 0.8;
+}
+
+
+.hero-content {
+    position: absolute;
+    bottom: 60px;
+    right: 5%;
+    z-index: 10;
+    color: white;
+    max-width: 320px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    text-shadow: 0 0 10px black;
+}
+
+.shop-now-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 40px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #141414;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero-content {
+        max-width: 80%;
+        font-size: 18px;
+        bottom: 70px;
+    }
+
+    .shop-now-btn {
+        font-size: 22px;
+        padding: 10px 30px;
+    }
+    .shop-now-btn:hover {
+        background-color: #fff;
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+    }
+}

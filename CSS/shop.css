@@ -4,14 +4,59 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Helvetica Now Text', Arial, sans-serif;
+    background: #fff;
+    color: #000;
+}
+/* Header */
 header{
-    background-color: black;
-    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+}
+
+.logo {
+  height: 32px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.icons img {
+  height: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.icons img:hover {
+  opacity: 0.8;
 }
 
 .mainBanner{
     background-image: url('/Images/paulo-silva-B2mY4p8GsYo-unsplash\ 1.png');
-    /*width: 100vh;*/
     background-size: contain;
     background-position: center;    
     background-repeat: no-repeat;   
@@ -23,7 +68,7 @@ header{
     padding: 1.5rem;
 }
 
- .image{
+.productImage{
     transform: scale(0.8);
 }
 
@@ -38,9 +83,9 @@ header{
 }
 
 .container{
-  display: flex;
-  padding: 30px;
-  gap: 12rem;
+    display: flex;
+    padding: 30px;
+    gap: 12rem;
 }
 
 .displayImages{
@@ -52,6 +97,7 @@ header{
     font-family:helvetica-light;
     font-size: 1.3rem;
 }
+
 .customise{
     font-family:helvetica-light;
     font-size:2rem;
@@ -59,13 +105,13 @@ header{
     width:150px;
 }
 
-.image p{
+.productImage p{
     font-size:1.07rem;
 }
 .sort p{
      font-size: 0.9rem;
 }
-.image span{
+.productImage span{
     font-family:helvetica-bold;
     font-weight: 800;
     margin-right: 12px;
@@ -83,6 +129,10 @@ header{
     background-color: white;
     border-width:1px;
     border-radius:9%;
+}
+
+.container {
+    padding-bottom: 200px; /* Ensure enough space for footer */
 }
 
 @media (max-width:767px) {
