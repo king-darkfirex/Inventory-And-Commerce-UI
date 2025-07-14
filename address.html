@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>address-page</title>
+    <link href="./CSS/address.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <header>
+       <img src="./images.home/img_logo.png" alt="Logo" class="logo">
+        <nav>
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#tryiton">TRY IT ON</a></li>
+        </ul>
+        </nav>
+        <div class="icons">
+        <img src="./images.home/img_user.svg" alt="Profile">
+        <img src="./images.home/img_cart.svg" alt="Shop">
+        </div>
+
+    </header>
+
+    <div class="checkout-steps">
+        <span>MY BAG</span>
+        <span>—</span>
+        <span><strong>ADDRESS</strong></span>
+        <span>—</span>
+        <span>PAYMENT</span>
+    </div>
+    
+    <div class="checkout-container">
+    <div class="checkout-form-section">
+        <div class="contact-container">
+            <h2>CONTACT INFORMATION</h2>
+            <form>
+             <div class="name-flex">
+             <div class="name-field">
+             <label for="first-name">First Name</label>
+             <input type="text" id="first-name" name="first-name" placeholder="First Name"><br><br>
+             </div>
+
+             <div class="name-field">
+             <label for="last-name">Last Name</label>
+             <input type="text" id="last-name" name="last-name" placeholder="Last Name"><br><br>
+             </div>
+             </div> 
+
+             <label for="email">Email Address</label>
+             <input type="email" id="email" name="email" placeholder="Email Address"><br><br>
+            </form>
+        </div>
+
+<div class="shipping-container">
+  <h2>SHIPPING ADDRESS</h2>
+  <form>
+    <label for="street">Street Address</label><br>
+    <input type="text" id="street" name="street" placeholder="Street Address">
+    
+    <label for="country">Country</label><br>
+    <input type="text" id="country" name="country" placeholder="Country">
+    
+    <label for="city">Town / City</label><br>
+    <input type="text" id="city" name="city" placeholder="Town / City">
+    
+    <div class="state-zip-flex">
+    <div class="state-zip-field">
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" placeholder="State">
+    </div>
+
+    <div class="state-zip-field">
+    <label for="zip">Zip Code</label>
+    <input type="text" id="zip" name="zip" placeholder="Zip Code">
+    </div>
+    </div>
+  </form>
+</div>
+
+<div class="billing-same-container">
+  <p>Billing address the same as shipping address?</p>
+  
+  <label>
+    <input type="radio" name="billingSame" value="yes">
+    Yes
+  </label>
+  
+  <label>
+    <input type="radio" name="billingSame" value="no">
+    No
+  </label>
+</div>
+</div>
+
+
+<div class="order-container">
+<div class="order-box">
+  <h2>ORDER SUMMARY</h2>
+  
+  <div class="order-item">
+    <img src="./Images/1715236404_5770792 1-3.png"/>
+     <div class="order-item-left">
+    <p>Plaid: Blue & White</p>
+      <div class="size-qty">
+       <span>Size: XL </span>
+       <span>Qty:02</span>
+      </div>
+  </div>
+  <div class="order-item-right">
+    <p class="price">Rs. 2598</p>
+    <button type="button">Remove</button>
+  </div>
+  </div>
+  
+  <div class="order-item">
+    <img src="./Images/1715236404_5770792 1.png" alt="grey-shirt">
+    <div class="order-item-left">
+    <p>Stripped Grey Shirt</p>
+      <div class="size-qty">
+       <span>Size: XL </span>
+       <span>Qty:02</span>
+      </div>
+    </div>
+    <div class="order-item-right">
+    <p class="price">Rs. 1999</p>
+    <button type="button">Remove</button>
+    </div>
+  </div>
+  
+  <form>
+    <input type="text" placeholder="Coupon Code?">
+    <button type="submit">Apply</button>
+  </form>
+  
+  <p class="price-line">
+    <span>Shipping:</span><span>Free</span></p>
+  <p class="price-line">
+    <span>Subtotal:</span><span>RS. 4597</span> </p>
+  <p class="price-line">
+    <span>Total:</span><span>RS. 4597</span> </p>
+  </div>
+  <button class="proceed" type="button">Proceed to Payment</button>
+</div>
+
+</div>
+  
+</body>
+</html>
