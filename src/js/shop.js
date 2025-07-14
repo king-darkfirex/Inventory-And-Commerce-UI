@@ -7,11 +7,13 @@ let generateShop =()=>{
     grid1.innerHTML = shopItemsData.map((x) => {
         let { id, name, price, img } = x;
         return `
-        <div class="product-card" id="product-id-${id}">
-            <img src="${img}" alt="Product Image">
-            <h4>${name}</h4>
-            <p><span>RS ${price}</span> Mrp incl. of all taxes</p>
-        </div>
+        <a href="product-detail.html?id=${id}" class="product-card-link">
+            <div class="product-card" id="product-id-${id}">
+                <img src="${img}" alt="Product Image">
+                <h4>${name}</h4>
+                <p><span>RS ${price}</span> Mrp incl. of all taxes</p>
+            </div>
+        </a>
         `;
     }).join("");
 
