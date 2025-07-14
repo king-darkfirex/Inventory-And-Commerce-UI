@@ -4,53 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Header */
-header{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #000;
-}
-
-.logo {
-  height: 32px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.nav-links a:hover {
-  opacity: 0.8;
-}
-
-.icons img {
-  height: 20px;
-  margin-left: 20px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.icons img:hover {
-  opacity: 0.8;
-}
-
-
 .about-section {
   padding: 60px 20px;
   display: flex;

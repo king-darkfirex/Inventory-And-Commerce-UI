@@ -249,7 +249,10 @@ input[type="radio"]:checked {
 /*flex for alligning side by side*/
 .checkout-container{
   display: flex;
-  flex: 4;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .checkout-form-section{

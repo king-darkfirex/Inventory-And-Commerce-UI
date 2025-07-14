@@ -8,20 +8,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <img src="src/images.home/img_logo.png" alt="Logo" class="logo">
-        <nav>
-        <ul class="nav-links">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#shop">SHOP</a></li>
-            <li><a href="#tryiton">TRY IT ON</a></li>
-        </ul>
-        </nav>
-        <div class="icons">
-        <img src="src/images.home/img_user.svg" alt="Profile">
-        <img src="src/images.home/img_cart.svg" alt="Shop">
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <!--Main Top Banner-->
     <section class = "mainBanner">
@@ -88,6 +75,12 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
+    });
+    
+    fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
     });
 </script>
 <script src = "src/js/Data.js"></script>

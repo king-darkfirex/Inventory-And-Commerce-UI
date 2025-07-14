@@ -5,26 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Page</title>
   <link rel="stylesheet" href="src/CSS/product-detail.css" />
+  <link rel ="stylesheet" href ="src/CSS/header.css">
 </head>
 <body>
-
   <!-- Header -->
-<header class="header">
-  <img src="src/images.checkout/img_logo copy.png" alt="Logo" class="logo" />
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#shop">SHOP</a></li>
-      <li><a href="#tryiton">TRY IT ON</a></li>
-    </ul>
-  </nav>
-  <div class="icons">
-    <img src="src/images.checkout/img_user copy.svg" alt="Profile" />
-    <img src="src/images.checkout/img_cart copy.svg" alt="Shop" />
-  </div>
-</header>
-
+  <div id="header-placeholder"></div>
+       
   <!-- Breadcrumb -->
+
   <div class="breadcrumb">
     HOME / SUMMER COLLECTION / PLAID
   </div>
@@ -71,6 +59,12 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+    fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
     });
 </script>
 <script src ="./src/js/Data.js"></script>
