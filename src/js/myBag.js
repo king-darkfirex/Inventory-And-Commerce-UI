@@ -34,29 +34,30 @@ function renderCart() {
     total += price * quantity;
 
     return `
-      <div class="cart-item-card">
-        <img src="${img}" class="cart-item-img" alt="${name}" />
-        <div class="cart-item-details">
+      <div class="cart-item">
+        <img src="${img}" alt="${name}" />
+        <div class="item-details">
           <h4>${name}</h4>
           <p>Size: L</p>
           <p>Quantity: ${quantity}</p>
-          <p>₹${price}</p>
-          <span>MRP incl. of all taxes</span>
+          <p>Price: ₹${price}</p>
+          <span>MRP incl. of all taxes</span><br/>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         </div>
-        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
       </div>
     `;
   }).join("");
+
 
   let gst = Math.round(total * 0.18);
   cartTotal.textContent = `₹${total}`;
   cartGst.textContent = `₹${gst}`;
 }
 
-function removeItem(index) {
-  cartData.splice(index, 1);
-  localStorage.setItem("cartData", JSON.stringify(cartData));
-  renderCart();
-}
-
 renderCart();
+
+function removeItem(index) {
+  cartData.splice(index, 1); 
+  localStorage.setItem("cart", JSON.stringify(cartData)); 
+  renderCart(); 
+}
