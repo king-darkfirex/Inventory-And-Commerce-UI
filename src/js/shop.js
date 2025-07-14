@@ -5,7 +5,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop =()=>{
     grid1.innerHTML = shopItemsData.map((x) => {
-        let { id, name, price, img } = x;
+        let { id, name, price, img, quantity} = x;
         return `
         <a href="product-detail.html?id=${id}" class="product-card-link">
             <div class="product-card" id="product-id-${id}">
@@ -19,7 +19,7 @@ let generateShop =()=>{
 
 
     grid2.innerHTML = shopItemsData.map((x) => {
-        let { id, name, price, img } = x;
+        let { id, name, price, img, quantity} = x;
         return `
         <div class="product-card" id="product-id-${id}">
             <img src="${img}" alt="Product Image">

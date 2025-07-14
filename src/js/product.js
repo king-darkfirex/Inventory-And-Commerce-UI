@@ -8,7 +8,7 @@ let selectedProduct = shopItemsData.find((x) => x.id === productId);
 let product = document.getElementById("image-gallery");
 
 if (selectedProduct) {
-  let { id, name, price, img } = selectedProduct;
+  let { id, name, price, img, quantity} = selectedProduct;
 
   product.innerHTML = `
     <img src="${img}" alt="Main Product" class="main-image scale-hover">
@@ -24,7 +24,7 @@ if (selectedProduct) {
 product = document.getElementById("product-info");
 
 if(selectedProduct){
-    let{id, name, price, img} = selectedProduct;
+    let{id, name, price, img, quantity} = selectedProduct;
 
     product.innerHTML = `
         <h1>${name}</h1>
@@ -47,7 +47,7 @@ if(selectedProduct){
 
         <!-- Image-based Add to Cart -->
         <div class="add-to-cart-image scale-hover">
-            <img src="src/images.checkout/add to cart.png" alt="Add to Cart" />
+            <img id = "add-to-cart" src="src/images.checkout/add to cart.png" alt="Add to Cart"/>
         </div>
 
         <div class="product-details">
@@ -60,3 +60,29 @@ if(selectedProduct){
         </div>
     `;
 }
+
+
+document.getElementById("add-to-cart").addEventListener("click", function () {
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if product already exists in cart
+    let existing = cart.find(item => item.id === selectedProduct.id);
+    if (existing) {
+        existing.quantity += quantity;
+    } else {
+        cart.push({
+            id: selectedProduct.id,
+            name: selectedProduct.name,
+            img: selectedProduct.img,
+            price: selectedProduct.price,
+            quantity: quantity,
+            size: "L"
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart!");
+});
+
+
