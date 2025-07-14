@@ -28,107 +28,86 @@ body{
   background-color: black;
 }
 
-input:focus {
-  outline: none;
-  border-color: black;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+/* === Payment Section Custom Styling === */
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
-.contact-container,.shipping-container {
+.checkout-form-section {
+  padding: 20px;
+  width: 50%;
+}
+
+.order-container {
+  flex: 1;
+  width: 50%;
+  margin: 20px;
+}
+
+.payment-box {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
-  font-family: Arial, sans-serif;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-container h2 ,.shipping-container h2{
-  font-size: 20px;
+.payment-box h2 {
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.name-flex {
-  width: 97%;
+.payment-box label {
   display: flex;
-  gap: 20px;
-}
-
-.name-field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.name-field label {
-  margin-bottom: 0;
-}
-
-.state-zip-flex {
-  display: flex;
-  width: 97%;
-  gap: 20px;
-}
-
-.state-zip-field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.state-zip-field label{
-  margin-bottom: 0;
-}
-
-.contact-container label ,.shipping-container label{
-  padding:8px;
-  font-size: 13px;
-}
-
-.contact-container input[type="text"],
-.contact-container input[type="email"]{
-   width: 95%;
-  padding: 6px 8px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.shipping-container input[type="text"] {
-  width: 95%;
-  padding: 6px 8px;
+  align-items: center;
   margin-bottom: 10px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   font-size: 14px;
-}
-
-.billing-same-container{
-  font-size: 19px;
-  font-weight: bold;
-  text-transform: uppercase;
-} 
-
-.billing-same-container label{
-  font-weight: lighter;
-  font-size: 16px;
-}
-.billing-same-container input[type="radio"]{
-  -webkit-appearance: none;
-  appearance: none;
-  height:20px;
-  width: 25px;
-  background-color:#dcdada;
-  border-radius: 0;
   cursor: pointer;
 }
-input[type="radio"]:checked {
-   background-color: #aaa;
+
+.payment-box input[type="radio"] {
+  margin-right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
 }
+
+.payment-box input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.payment-box input[type="text"] {
+  width: 95%;
+  padding: 6px 8px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.payment-box img {
+  height: 20px;
+  margin-right: 8px;
+}
+
 
 /* order summary*/
 

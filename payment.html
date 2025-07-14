@@ -5,149 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link href="src/CSS/payment.css" rel="stylesheet"/>
-
 </head>
+
 <body>
     <div id="header-placeholder"></div>
-
 
     <div class="checkout-steps">
         <span>MY BAG</span>
         <div class="line"></div>
-        <span>ADDRESS</span>
+        <span><strong>ADDRESS</strong></span>
         <div class="line"></div>
-        <span><strong>PAYMENT</strong></span>
+        <span>PAYMENT</span>
     </div>
     
-    <div class="checkout-container">
+  <div class="checkout-container">
+    <!-- LEFT: Payment boxes -->
     <div class="checkout-form-section">
-        <div class="contact-container">
-            <h2>CONTACT INFORMATION</h2>
-            <form>
-             <div class="name-flex">
-             <div class="name-field">
-             <label for="first-name">First Name</label>
-             <input type="text" id="first-name" name="first-name" placeholder="First Name"><br><br>
-             </div>
+      <div class="payment-box">
+        <h2>PAYMENT OPTIONS</h2>
+        <label><input type="radio" name="payment-method" value="upi" /> Pay Using UPI</label>
+        <label><input type="radio" name="payment-method" value="card" /> Credit / Debit Card</label>
+        <label><input type="radio" name="payment-method" value="cod" /> Cash on Delivery</label>
 
-             <div class="name-field">
-             <label for="last-name">Last Name</label>
-             <input type="text" id="last-name" name="last-name" placeholder="Last Name"><br><br>
-             </div>
-             </div> 
-
-             <label for="email">Email Address</label>
-             <input type="email" id="email" name="email" placeholder="Email Address"><br><br>
-            </form>
-        </div>
-
-<div class="shipping-container">
-  <h2>SHIPPING ADDRESS</h2>
-  <form>
-    <label for="street">Street Address</label><br>
-    <input type="text" id="street" name="street" placeholder="Street Address">
-    
-    <label for="country">Country</label><br>
-    <input type="text" id="country" name="country" placeholder="Country">
-    
-    <label for="city">Town / City</label><br>
-    <input type="text" id="city" name="city" placeholder="Town / City">
-    
-    <div class="state-zip-flex">
-    <div class="state-zip-field">
-    <label for="state">State</label>
-    <input type="text" id="state" name="state" placeholder="State">
-    </div>
-
-    <div class="state-zip-field">
-    <label for="zip">Zip Code</label>
-    <input type="text" id="zip" name="zip" placeholder="Zip Code">
-    </div>
-    </div>
-  </form>
-</div>
-
-<div class="billing-same-container">
-  <p>Billing address the same as shipping address?</p>
-  
-  <label>
-    <input type="radio" name="billingSame" value="yes">
-    Yes
-  </label>
-  
-  <label>
-    <input type="radio" name="billingSame" value="no">
-    No
-  </label>
-</div>
-</div>
-
-
-<div class="order-container">
-<div class="order-box">
-  <h2>ORDER SUMMARY</h2>
-  
-  <div class="order-item">
-    <img src="src/Images/1715236404_5770792 1-3.png"/>
-     <div class="order-item-left">
-    <p>Plaid: Blue & White</p>
-      <div class="size-qty">
-       <span>Size: XL </span>
-       <span>Qty:02</span>
       </div>
-  </div>
-  <div class="order-item-right">
-    <p class="price">Rs. 2598</p>
-    <button type="button">Remove</button>
-  </div>
-  </div>
-  
-  <div class="order-item">
-    <img src="src/Images/1715236404_5770792 1.png" alt="grey-shirt">
-    <div class="order-item-left">
-    <p>Stripped Grey Shirt</p>
-      <div class="size-qty">
-       <span>Size: XL </span>
-       <span>Qty:02</span>
+
+      <div class="payment-box" id="upi-section" style="display:none">
+        <h2>Pay Using UPI</h2>
+        <label><input type="radio" name="upi" value="gpay" /> <img src="src/images.upi/gpay.webp" alt="GPay" /> Google Pay</label>
+        <label><input type="radio" name="upi" value="paytm" /> <img src="src/images.upi/paytm.webp" alt="Paytm" /> Paytm</label>
+      </div>
+
+      <div class="payment-box" id="card-section" style="display:none">
+        <h2>Credit / Debit Card</h2>
+        <input type="text" placeholder="Card Number" />
+        <input type="text" placeholder="Cardholder Name" />
+        <input type="text" placeholder="Expiry MM/YY" />
+        <input type="text" placeholder="CVV" />
       </div>
     </div>
-    <div class="order-item-right">
-    <p class="price">Rs. 1999</p>
-    <button type="button">Remove</button>
+
+    <!-- RIGHT: Order summary (no change) -->
+    <div class="order-container">
+      <div class="order-box">
+        <h2>ORDER SUMMARY</h2>
+        <div id="orderList"></div>
+        <!-- subtotal, total, etc. -->
+      </div>
+      <button class="proceed" type="button" onclick="location.href='shop.html'">Place Order</button>
     </div>
   </div>
-  
-  <form>
-    <input type="text" placeholder="Coupon Code?">
-    <button type="submit">Apply</button>
-  </form>
-  
-  <p class="price-line">
-    <span>Shipping:</span><span>Free</span></p>
-  <p class="price-line">
-    <span>Subtotal:</span><span>RS. 4597</span> </p>
-  <p class="price-line">
-    <span>Total:</span><span>RS. 4597</span> </p>
-  </div>
-  <button class="proceed" type="button" onclick="location.href='payment.html'">Proceed to Payment</button>
-</div>
 
-</div>
 
   <!-- Footer -->
   <div id="footer-placeholder"></div>
 </body>
+
 <script>
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
     });
-
+  
   fetch("header.html")
     .then(response => response.text())
     .then(data => {
     document.getElementById("header-placeholder").innerHTML = data;
     });
 </script>
+<script src ="src/js/Data.js"></script>
+<script src ="src/js/payment.js"></script>
 </html>

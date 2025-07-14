@@ -83,39 +83,10 @@
 
 
 <div class="order-container">
-<div class="order-box">
+<div class="order-box" >
   <h2>ORDER SUMMARY</h2>
-  
-  <div class="order-item">
-    <img src="src/Images/1715236404_5770792 1-3.png"/>
-     <div class="order-item-left">
-    <p>Plaid: Blue & White</p>
-      <div class="size-qty">
-       <span>Size: XL </span>
-       <span>Qty:02</span>
-      </div>
-  </div>
-  <div class="order-item-right">
-    <p class="price">Rs. 2598</p>
-    <button type="button">Remove</button>
-  </div>
-  </div>
-  
-  <div class="order-item">
-    <img src="src/Images/1715236404_5770792 1.png" alt="grey-shirt">
-    <div class="order-item-left">
-    <p>Stripped Grey Shirt</p>
-      <div class="size-qty">
-       <span>Size: XL </span>
-       <span>Qty:02</span>
-      </div>
-    </div>
-    <div class="order-item-right">
-    <p class="price">Rs. 1999</p>
-    <button type="button">Remove</button>
-    </div>
-  </div>
-  
+  <div id="orderList"></div>
+
   <form>
     <input type="text" placeholder="Coupon Code?">
     <button type="submit">Apply</button>
@@ -124,13 +95,15 @@
   <p class="price-line">
     <span>Shipping:</span><span>Free</span></p>
   <p class="price-line">
-    <span>Subtotal:</span><span>RS. 4597</span> </p>
+    <span>Subtotal:</span><span id="subtotal">RS. 0</span>
+  </p>
   <p class="price-line">
-    <span>Total:</span><span>RS. 4597</span> </p>
+    <span>Total:</span><span id="total">RS. 0</span>
+  </p>
+
   </div>
   <button class="proceed" type="button" onclick="location.href='payment.html'">Proceed to Payment</button>
 </div>
-
 </div>
 
   <!-- Footer -->
