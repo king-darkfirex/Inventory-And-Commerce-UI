@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bag</title>
+    <link rel = "stylesheet" href="./src/CSS/myBag.css">
+</head>
+<body>
+    <header>
+        <img src="src/images.home/img_logo.png" alt="Logo" class="logo">
+        <nav>
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#tryiton">TRY IT ON</a></li>
+        </ul>
+        </nav>
+        <div class="icons">
+        <img src="src/images.home/img_user.svg" alt="Profile">
+        <img src="src/images.home/img_cart.svg" alt="Shop">
+        </div>
+    </header>
+    
+    <div class="checkout-steps">
+        <span><strong>MY BAG</strong></span>
+        <div class="line"></div>
+        <span>ADDRESS</span>
+        <div class="line"></div>
+        <span>PAYMENT</span>
+    </div>
+
+    <section class="cart-container">
+        <!-- Left: Cart Items -->
+        <div class="cart-left">
+            <h2>My Cart</h2>
+            <div id="cart-items" class="cart-items">
+            <!-- Cart items will be injected here via JS -->
+            </div>
+        </div>
+
+        <!-- Right: Summary -->
+        <div class="cart-right">
+            <button class="place-order-btn" onclick="location.href='address.html'">Place Order</button>
+
+            <div class="coupon-box">
+            <input type="text" placeholder="Enter Coupon Code">
+            <button>Apply</button>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="billing-details">
+            <h3>Billing Details</h3>
+            <div class="bill-row">
+                <span>Cart Total</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <div class="bill-row">
+                <span>GST (18%)</span>
+                <span id="cart-gst">₹0</span>
+            </div>
+            <div class="bill-row">
+                <span>Shipping Charges</span>
+                <span>₹0</span>
+            </div>
+            </div>
+
+            <button class="place-order-btn">Place Order</button>
+        </div>
+    </section>
+
+    <section class="recommend-section">
+        <h3>You May Also Like</h3>
+        <hr class="recommend-line" />
+        <div class="recommend-grid" id="recommend-grid"></div>
+    </section>
+
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+</body>
+<script src = "./src/js/Data.js"></script>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+<script src = "./src/js/myBag.js"></script>
+
+</html>

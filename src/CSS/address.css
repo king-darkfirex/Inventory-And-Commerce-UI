@@ -1,5 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -46,15 +52,25 @@ header{
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .checkout-steps{
   margin-top: 120px;
   margin-bottom: 40px;
-  text-align: center;
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 25px;
 }
 .checkout-stepsß strong:hover{
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.line {
+  height: 2px;
+  width: 40px; /* adjust length */
+  background-color: black;
 }
 
 input:focus {
