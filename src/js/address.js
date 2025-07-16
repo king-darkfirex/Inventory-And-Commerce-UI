@@ -38,3 +38,31 @@ function removeItem(id) {
 }
 
 generateList();
+
+const proceedBtn = document.querySelector(".proceed");
+
+  if (proceedBtn) {
+    proceedBtn.addEventListener("click", () => {
+      const fieldIds = [
+        "first-name", "last-name", "email",
+        "street", "country", "city",
+        "state", "zip"
+      ];
+
+      const allFilled = fieldIds.every(id => {
+        const field = document.getElementById(id);
+        const isEmpty = !field.value.trim();
+        return !isEmpty;
+      });
+
+      const billingSelected = document.querySelector('input[name="billingSame"]:checked');
+
+      if (!allFilled) {
+        alert("Please fill in all required fields.");
+      } else if (!billingSelected) {
+        alert("Please select if billing address is the same as shipping address.");
+      } else {
+        window.location.href = "payment.html";
+      }
+    });
+  }
