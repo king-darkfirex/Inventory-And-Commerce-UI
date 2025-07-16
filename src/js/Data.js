@@ -11,9 +11,8 @@ let shopItemsData = [
         id: "1715236404_5770792_1-2",
         name: "STRIPED GREY SHIRT",
         price: 1999,
-        img: "src/images.shop/1715236404_5770792_1-2.png",
+        img: "/Inventory-And-Commerce-UI/src/images.shop/1715236404_5770792_1-2.png",
         quantity: 0
-
     },
 
     {
